@@ -18,14 +18,14 @@
                 <!-- Coluna 0: Adultos -->
                 <HorizontalStackLayout Grid.Column="0" HorizontalOptions="Center">
                     <Label Text="Adultos: " />
-                    <Label Text="{Binding QntAdultos}" 
+                    <Label Text="{Binding QntdAdultos}" 
                    TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
 
                 <!-- Coluna 1: Crianças -->
                 <HorizontalStackLayout Grid.Column="1" HorizontalOptions="Center">
                     <Label Text="Crianças: " />
-                    <Label Text="{Binding QntCriancas}" 
+                    <Label Text="{Binding QntdCriancas}" 
                    TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
             </Grid>

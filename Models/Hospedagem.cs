@@ -2,7 +2,7 @@
 {
     public class Hospedagem
     {
-        public Quarto QuartoSelecionado { get; set; }
+        public Quarto? QuartoSelecionado { get; set; }
         public int QntdAdultos { get; set; }
         
         public int QntdCriancas { get; set; }
@@ -17,8 +17,12 @@
         }
 
         public double ValorTotal
-        { get
+        {
+            get
             {
+                if (QuartoSelecionado == null)
+                    return 0;
+
                 double valor_adultos = QntdAdultos * QuartoSelecionado.ValorDiariaAdulto;
                 double valor_criancas = QntdCriancas * QuartoSelecionado.ValorDiariaCrianca;
 
@@ -26,7 +30,6 @@
 
                 return total;
             }
-
         }
     }
 }
